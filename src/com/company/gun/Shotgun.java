@@ -9,5 +9,4 @@ public class Shotgun extends Gun {
     public Shotgun() {
         super(NAME, DAMAGE_MIN, DAMAGE_MAX, CHANCE);
     }
-
 }

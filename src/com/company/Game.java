@@ -25,8 +25,8 @@ public class Game {
     public void go() {
         Scanner sc = new Scanner(System.in);
 
+        show();
         while (!isGameOver()) {
-            show();
             System.out.printf("%s [%s], ваш ход: ", current.getName().toUpperCase(Locale.ROOT), current.getCurrentGun().getName());
             String command = sc.next();
 
@@ -43,10 +43,13 @@ public class Game {
             } else {
                 int gunNumber = Integer.parseInt(command);
                 current.setCurrentGunByNum(gunNumber);
+                continue;
             }
+
+            show();
         }
 
-        show();
+
         System.out.println("Игра окончена! Победил " + winPlayer().getName().toUpperCase(Locale.ROOT));
     }
 
@@ -94,7 +97,6 @@ public class Game {
         }
         System.out.println("...");
         System.out.println();
-
     }
 
 }
