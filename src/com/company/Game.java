@@ -31,10 +31,13 @@ public class Game {
             String command = sc.next();
 
             if (command.equals(COMMAND_SHOOT)) {
-                int damage = current.shoot(otherPlayer());
+                Player other = otherPlayer();
+                int damage = current.shoot(other);
+
                 System.out.printf("%nВЫСТРЕЛ! Урон: %d  %n%n", damage);
                 System.out.print("Для продолжения нажмите Enter");
                 new Scanner(System.in).nextLine();
+
                 changePlayer();
 
             } else {
