@@ -19,20 +19,8 @@ public abstract class Gun {
         return name;
     }
 
-    public int getDamageMin() {
-        return damageMin;
-    }
-
-    public int getDamageMax() {
-        return damageMax;
-    }
-
-    public int getChance() {
-        return chance;
-    }
-
     public int shoot() {
-        boolean isHit = chance >= randomInt(0, 100);
+        boolean isHit = chance >= randomInt(0, 100);    //попал?
         if(!isHit) {
             return 0;
         }
