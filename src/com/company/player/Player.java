@@ -8,7 +8,6 @@ public class Player {
     private Gun currentGun;
     private int hitPoint = 100;
 
-
     public Player(String name, Gun... guns) {
         this.name = name;
         this.guns = guns;
