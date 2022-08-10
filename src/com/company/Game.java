@@ -33,7 +33,10 @@ public class Game {
             if (command.equals(COMMAND_SHOOT)) {
                 int damage = current.shoot(otherPlayer());
                 System.out.printf("%nВЫСТРЕЛ! Урон: %d  %n%n", damage);
+                System.out.print("Для продолжения нажмите Enter");
+                new Scanner(System.in).nextLine();
                 changePlayer();
+
             } else {
                 int gunNumber = Integer.parseInt(command);
                 current.setCurrentGunByNum(gunNumber);
