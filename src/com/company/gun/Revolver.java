@@ -6,7 +6,6 @@ public class Revolver extends Gun{
     private static final int DAMAGE_MAX = 20;
     private static final int CHANCE = 80;
 
-
     public Revolver() {
         super(NAME, DAMAGE_MIN, DAMAGE_MAX, CHANCE);
     }

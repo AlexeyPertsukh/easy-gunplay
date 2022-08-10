@@ -1,7 +1,5 @@
 package com.company.gun;
 
-import java.util.Random;
-
 public abstract class Gun {
     private final String name;
     private final int damageMin;  //максимальный урон
