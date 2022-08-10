@@ -3,7 +3,7 @@ package com.company.gun;
 public class Revolver extends Gun{
     private static final String NAME = "Револьвер";
     private static final int DAMAGE_MIN = 10;
-    private static final int DAMAGE_MAX = 20;
+    private static final int DAMAGE_MAX = 25;
     private static final int CHANCE = 80;
 
     public Revolver() {
