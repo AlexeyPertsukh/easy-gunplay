@@ -49,7 +49,6 @@ public class Game {
             show();
         }
 
-
         System.out.println("Игра окончена! Победил " + winPlayer().getName().toUpperCase(Locale.ROOT));
     }
 

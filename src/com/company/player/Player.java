@@ -22,7 +22,7 @@ public class Player {
         return hitPoint;
     }
 
-    public void reduceHitPoints(int damage) {
+    public void subtractHitPoints(int damage) {
         hitPoint -= damage;
         if(hitPoint < 0) {
             hitPoint = 0;
@@ -51,7 +51,7 @@ public class Player {
 
     public int shoot(Player enemy) {
         int damage = currentGun.shoot();
-        enemy.reduceHitPoints(damage);
+        enemy.subtractHitPoints(damage);
         return damage;
     }
 }
