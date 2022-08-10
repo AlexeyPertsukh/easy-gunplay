@@ -76,16 +76,16 @@ public class Game {
 
     private void show() {
         System.out.println("----------------------------------------------------------------------");
-        System.out.printf("           %-20s    %-20s %n", player1.getName(), player2.getName());
-        System.out.printf("Здоровье:  %-20d    %-20d %n", player1.getHitPoint(), player2.getHitPoint());
+        System.out.printf("              %-20s    %-20s %n", player1.getName(), player2.getName());
+        System.out.printf("Здоровье:     %-20d    %-20d %n", player1.getHitPoint(), player2.getHitPoint());
 
         String player1GunName = player1.getCurrentGun().getName().toUpperCase(Locale.ROOT);
         String player2GunName = player2.getCurrentGun().getName().toUpperCase(Locale.ROOT);
 
-        System.out.printf("Оружие:    %-20s    %-20s %n", player1GunName, player2GunName);
-        System.out.printf("           %-20s    %-20s %n", player1.getCurrentGun().info(), player2.getCurrentGun().info());
+        System.out.printf("Оружие:       %-20s    %-20s %n", player1GunName, player2GunName);
+        System.out.printf("Урон, шанс:   %-20s    %-20s %n", player1.getCurrentGun().info(), player2.getCurrentGun().info());
         System.out.println("----------------------------------------------------------------------");
-        System.out.printf("Команды:   %s выстрел, 0 - %d поменять оружие %n", COMMAND_SHOOT, current.gunCount() - 1);
+        System.out.printf("Команды:      %s выстрел, 0 - %d поменять оружие %n", COMMAND_SHOOT, current.gunCount() - 1);
         System.out.println("----------------------------------------------------------------------");
         System.out.println();
         System.out.println("Доступное оружие:");
