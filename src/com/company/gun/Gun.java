@@ -29,7 +29,7 @@ public abstract class Gun {
     }
 
     public String info() {
-        return String.format("(%d-%d↯, %d%%)", damageMin, damageMax, chance);
+        return String.format("%d-%d↯, %d%%", damageMin, damageMax, chance);
     }
 
     private static int randomInt(int min, int max) {

@@ -90,7 +90,7 @@ public class Game {
         System.out.println();
         System.out.println("Доступное оружие:");
         for (int i = 0; i < current.gunCount(); i++) {
-            System.out.printf("%d - %s %s  %n", i, current.getGun(i).getName(), current.getGun(i).info());
+            System.out.printf("%d - %s (%s)  %n", i, current.getGun(i).getName(), current.getGun(i).info());
         }
         System.out.println("...");
         System.out.println();
