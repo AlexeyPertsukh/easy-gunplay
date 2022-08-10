@@ -2,8 +2,8 @@ package com.company.gun;
 
 public abstract class Gun {
     private final String name;
-    private final int damageMin;  //максимальный урон
-    private final int damageMax;  //минимальный урон
+    private final int damageMin;  //минимальный урон
+    private final int damageMax;  //максимальный урон
     private final int chance;     //вероятность попадания, в процентах
 
     public Gun(String name, int damageMin, int damageMax, int chance) {
