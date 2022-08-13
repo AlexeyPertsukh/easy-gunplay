@@ -4,7 +4,7 @@ import com.company.Game;
 import com.company.gun.Gun;
 
 public class Bot extends Player{
-    private String command;
+    private String command = Game.COMMAND_SHOOT;
 
     public Bot(String name, Gun... guns) {
         super(name, guns);
@@ -16,7 +16,7 @@ public class Bot extends Player{
     }
 
     public String getCommand() {
-        if(command == null || command.equals(Game.COMMAND_SHOOT)) {
+        if(command.equals(Game.COMMAND_SHOOT)) {
             command = String.format("%d",(int)(Math.random() * gunCount()));
         } else {
             command = Game.COMMAND_SHOOT;

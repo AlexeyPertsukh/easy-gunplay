@@ -10,7 +10,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Game {
-
     public static final String COMMAND_SHOOT = "+";
 
     private final Player player1;
