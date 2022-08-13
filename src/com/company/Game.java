@@ -3,6 +3,7 @@ package com.company;
 import com.company.gun.Grenade;
 import com.company.gun.Revolver;
 import com.company.gun.Shotgun;
+import com.company.player.Bot;
 import com.company.player.Player;
 
 import java.util.Locale;
@@ -10,15 +11,15 @@ import java.util.Scanner;
 
 public class Game {
 
-    private static final String COMMAND_SHOOT = "+";
+    public static final String COMMAND_SHOOT = "+";
 
     private final Player player1;
     private final Player player2;
     private Player current;
 
-    public Game() {
-        player1 = new Player("Мент", new Revolver(), new Shotgun(), new Grenade());
-        player2 = new Player("Бандит", new Revolver(), new Shotgun(), new Grenade());
+    public Game(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
         current = player1;
     }
 
@@ -28,7 +29,14 @@ public class Game {
         show();
         while (!isGameOver()) {
             System.out.printf("%s [%s], ваш ход: ", current.getName().toUpperCase(Locale.ROOT), current.getCurrentGun().getName());
-            String command = sc.next();
+            String command;
+
+            if(current instanceof Bot) {
+                command = ((Bot)current).getCommand();
+                System.out.println(command);
+            } else {
+                command = sc.next();
+            }
 
             if (command.equals(COMMAND_SHOOT)) {
                 Player other = otherPlayer();
